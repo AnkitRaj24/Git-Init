@@ -4,9 +4,9 @@ const path = require("path");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    const dir = path.join(__dirname, "../Resume"); // Corrected path
+    const dir = path.join(__dirname, "../Resume"); 
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true }); // Create directory if it doesn't exist
+      fs.mkdirSync(dir, { recursive: true }); 
     }
     cb(null, dir);
   },
